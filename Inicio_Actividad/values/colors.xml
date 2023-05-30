@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primario">#009688</color>
+    <color name="primario1">#017065</color>
+    <color name="secundario">#00BCD4</color>
+
+    <color name="modo_oscuro">#673AB7</color>
+    <color name="notificaciones">#FFEB3B</color>
+    <color name="privado">#8BC34A</color>
+    <color name="seguridad">#4CAF50</color>
+    <color name="azulito">#14D5ED</color>
+    <color name="orange">#FF6534</color>
+    <color name="gray">#7A7574</color>
+
+</resources>
