@@ -103,10 +103,10 @@ public class Activity_areas_cuerpo extends AppCompatActivity {
     private void updateButtonColor(Button button) {
         if (button.isSelected()) {
             button.setSelected(false);
-            button.setBackgroundColor(Color.parseColor("#03DAC5")); // Cambia el color de fondo a blanco
+            button.setBackgroundColor(Color.parseColor("#FFFFF0")); // Cambia el color de fondo a blanco
         } else {
             button.setSelected(true);
-            button.setBackgroundColor(Color.parseColor("#FF0000")); // Cambia el color de fondo a rojo
+            button.setBackgroundColor(Color.parseColor("#15D63E")); // Cambia el color de fondo a rojo
         }
     }
 
