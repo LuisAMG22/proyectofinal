@@ -7,8 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorBtn">#FF3300</color>
-    <color name="colorBtnPress">#FF03DAC5</color>
 
     <color name="green_dark">#2196F3</color>
     <color name="green_normal">#03A9F4</color>
