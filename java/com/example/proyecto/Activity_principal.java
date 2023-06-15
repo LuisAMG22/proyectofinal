@@ -3,6 +3,8 @@
  import android.content.DialogInterface;
  import android.os.Bundle;
  import android.view.MenuItem;
+ import android.view.View;
+ import android.widget.Toast;
 
  import androidx.annotation.NonNull;
  import androidx.appcompat.app.AlertDialog;
@@ -11,6 +13,7 @@
  import androidx.fragment.app.FragmentTransaction;
 
  import com.google.android.material.bottomnavigation.BottomNavigationView;
+ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
  public class Activity_principal extends AppCompatActivity {
@@ -27,8 +30,19 @@
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectListener);
-
         loadFragment(firstFragment);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //AQUI METE MIKEE TOWERS SU VAINA DE AÑADIR EJERCICIO NUEVO
+                // Acción a realizar cuando se pulsa el botón fab
+                // Por ejemplo, mostrar un mensaje o iniciar una nueva actividad
+                Toast.makeText(getApplicationContext(), "Botón FAB pulsado", Toast.LENGTH_SHORT).show();
+                // Aquí puedes agregar tu lógica personalizada
+            }
+        });
+
 
 
     }
