@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Settings</string>
+    <string name="texto_seguridad_privacidad">En nuestra aplicación móvil, la seguridad y la privacidad de nuestros usuarios son de suma importancia. Nos comprometemos a garantizar que su información personal y sus datos estén protegidos en todo momento.
+
+Implementamos medidas de seguridad sólidas para proteger la confidencialidad de su información. Utilizamos protocolos de cifrado y almacenamiento seguro para proteger sus datos personales, como nombres, direcciones, números de teléfono y direcciones de correo electrónico. Además, seguimos las mejores prácticas de seguridad en el desarrollo de la aplicación y realizamos pruebas regulares para identificar y abordar posibles vulnerabilidades.
+
+Respetamos su privacidad y solo recopilamos la información necesaria para brindarle una experiencia personalizada y mejorar nuestros servicios. Nunca compartiremos ni venderemos su información personal a terceros sin su consentimiento explícito.
+
+Nuestra aplicación también le brinda control sobre sus datos. Puede acceder, editar o eliminar su información personal en cualquier momento a través de la configuración de la aplicación. Además, puede administrar sus preferencias de privacidad y elegir qué datos desea compartir con nosotros.
+
+Además de proteger su información personal, también nos comprometemos a mantener la confidencialidad de sus actividades en la aplicación. No recopilamos ni almacenamos su historial de navegación ni otra información relacionada con su uso de la aplicación sin su consentimiento explícito.
+
+Si tiene alguna pregunta o inquietud relacionada con la seguridad o la privacidad, no dude en ponerse en contacto con nuestro equipo de soporte. Estamos aquí para ayudarlo y brindarle la tranquilidad de que su información está en buenas manos.
+
+Apreciamos su confianza al utilizar nuestra aplicación y nos esforzamos por ofrecerle una experiencia segura y protegida en todo momento.</string>
+
+
+    <string name="texto_sobre_la_aplicacion">La aplicación ofrece características y funcionalidades que facilitan la captura y organización de tus datos deportivos. Algunas de las características comunes incluyen:
+
+Registro de sesiones: Puedes crear registros de tus sesiones de entrenamiento, indicando la fecha, la duración, el tipo de actividad y otros detalles específicos. Esto te permite tener un historial de tus actividades pasadas.
+
+Medición de rendimiento: La aplicación te permite registrar tus métricas de rendimiento, como la distancia recorrida, el tiempo empleado, la cantidad de repeticiones o el peso levantado. Esto te permite hacer un seguimiento de tus mejoras a lo largo del tiempo.
+
+Gráficos y estadísticas: La aplicación puede generar gráficos y estadísticas basados en tus registros, brindándote una visión visual de tu progreso. Puedes ver cómo ha evolucionado tu rendimiento en diferentes áreas deportivas y establecer metas para mejorar.
+
+Metas y objetivos: Puedes establecer metas y objetivos personales en la aplicación. Por ejemplo, puedes fijarte un objetivo de correr una determinada distancia en un tiempo específico. La aplicación te ayuda a monitorear tu progreso hacia esas metas.
+
+Recordatorios y planificación: La aplicación puede enviar recordatorios para tus sesiones de entrenamiento programadas, ayudándote a mantener una rutina regular. También puede ofrecerte la opción de planificar futuras sesiones de entrenamiento y actividades deportivas.
+
+Almacenamiento de datos: La aplicación guarda tus registros y datos en una base de datos, lo que te permite acceder a ellos en cualquier momento. Esto facilita la revisión de tu historial y la comparación de tus resultados anteriores.
+
+En resumen, una aplicación de registro de datos de deporte es una herramienta valiosa para aquellos que desean hacer un seguimiento de su progreso deportivo. Te permite registrar y almacenar información relevante, establecer metas, monitorear tu rendimiento y obtener una visión clara de tu evolución a lo largo del tiempo.</string>
+    <string name="ajustes"> Ajustes</string>
+    <string name="modo_oscuro">Modo oscuro</string>
+    <string name="editrar_perfil">Editar Perfil</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="vibracion">Vibración</string>
+    <string name="seguridad_privacidad">Seguridad &amp; Privacidad</string>
+    <string name="idiomas">Idiomas</string>
+    <string name="sobre_aplicaicon">Sobre la Aplicación</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="faqs">FAQs</string>
+    <string name="btn_cerrar">Cerrar</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="ingles">Inglés</string>
+    <string name="espanol">Español</string>
+    <string name="selecciona_idioma">Selecciona el idioma:</string>
+
+</resources>
