@@ -4,31 +4,34 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class FirstFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private ExerciseListAdapter adapter;
+    private ExerciseListAdapter adapter2;
+
     private String mParam1;
     private String mParam2;
     private TextView titleTextView;
-    private EditText searchEditText;
     private ListView exerciseListView;
+    private ListView exerciseListView2;
+    private FloatingActionButton floatingActionButton;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -57,16 +60,24 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
 
         titleTextView = view.findViewById(R.id.titleTextView);
-        searchEditText = view.findViewById(R.id.searchEditText);
         exerciseListView = view.findViewById(R.id.exerciseListView);
-        ImageView searchIcon = view.findViewById(R.id.searchIcon);
+        exerciseListView2 = view.findViewById(R.id.exerciseListView2);
+        floatingActionButton = view.findViewById(R.id.floatingActionButton);
 
-        // Configurar el ListView con datos de ejemplo
-        String[] exerciseNames = {"Ejercicio 1", "Ejercicio 2", "Ejercicio 3", "Ejercicio 4", "Ejercicio 5", "Ejercicio 6", "Ejercicio 7"};
-        int[] exerciseImages = {R.drawable.cuerpo_brazos, R.drawable.cuerpo_brazos_pecho, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros};
+        // Configurar el ListView con datos SEGUN TU PLAN
+        String[] exerciseNames = {"Ejercicio 1", "Ejercicio 2", "Ejercicio 3", "Ejercicio 4", "Ejercicio 5", "Ejercicio 6"};
+        int[] exerciseImages = {R.drawable.cuerpo_brazos, R.drawable.cuerpo_brazos_pecho, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros, R.drawable.cuerpo_hombros};
+        String[] exerciseSubNames = {"sub1", "sub2", "sub3", "sub4", "sub5", "sub6"};
 
-        final ExerciseListAdapter adapter = new ExerciseListAdapter(getActivity(), exerciseNames, exerciseImages);
+        // Configurar el adaptador del primer ListView
+        final ExerciseListAdapter adapter = new ExerciseListAdapter(getActivity(), exerciseNames, exerciseImages, exerciseSubNames);
         exerciseListView.setAdapter(adapter);
+
+        // Configurar el adaptador del segundo ListView
+        String[] exerciseNames2 = {"Ejercicio A", "Ejercicio B", "Ejercicio C"};
+        String[] exerciseSubNames2 = {"Subtítulo A", "Subtítulo B", "Subtítulo C"};
+        final ExerciseListAdapter adapter2 = new ExerciseListAdapter(getActivity(), exerciseNames2, exerciseSubNames2);
+        exerciseListView2.setAdapter(adapter2);
 
         // Configurar el evento de clic en el elemento del ListView
         exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -74,47 +85,22 @@ public class FirstFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Obtener el ejercicio seleccionado
                 String exerciseName = exerciseNames[position];
-
-                // Abrir una nueva actividad o diálogo para mostrar la información del ejercicio
-                // según tu requerimiento
+                //AQUI VA LO DE MIKEL PARA REALIZAR EL EJERCICIO el string es el ejercicio
+                // que yo pulse hay que usarlo
                 showBottomDialog();
             }
         });
 
-
-        searchIcon.setOnClickListener(new View.OnClickListener() {
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (searchEditText.getVisibility() == View.VISIBLE) {
-                    searchEditText.setVisibility(View.GONE); // Oculta el EditText de búsqueda si ya está visible
-                } else {
-                    searchEditText.setVisibility(View.VISIBLE); // Muestra el EditText de búsqueda si está oculto
-                }
+                //AQUI GUARDAS EL NUMERO DE EJERCICIOS TOTALES QUE HA HECHO EL USUARIO
             }
         });
-
-        // Agregar el evento de texto cambiado para el EditText de búsqueda
-        searchEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // No se requiere implementación
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // Filtrar los elementos del ListView según la consulta de búsqueda
-                adapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // No se requiere implementación
-            }
-        });
-
 
         return view;
     }
+
 
     private void showBottomDialog() {
 
@@ -138,4 +124,5 @@ public class FirstFragment extends Fragment {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
     }
+
 }
