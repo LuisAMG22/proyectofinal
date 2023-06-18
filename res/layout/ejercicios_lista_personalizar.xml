@@ -4,30 +4,19 @@
     android:layout_height="100dp"
     android:padding="8dp">
 
-    <ImageView
-        android:id="@+id/exerciseImageView"
-        android:layout_width="106dp"
-        android:layout_height="109dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/icono_item" />
-
     <TextView
-        android:id="@+id/exerciseTitleTextView"
+        android:id="@+id/exerciseTitleTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/exerciseImageView"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="1dp"
-        android:layout_toEndOf="@id/exerciseImageView"
         android:text="Título del Ejercicio"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/exerciseSubtitleTextView"
+        android:id="@+id/exerciseSubtitleTextView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/exerciseTitleTextView"
         android:layout_alignParentTop="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="55dp"
@@ -35,4 +24,3 @@
         android:textSize="14sp" />
 
 </RelativeLayout>
-

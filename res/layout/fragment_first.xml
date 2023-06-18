@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,51 +10,61 @@
     <!-- Contenedor del contenido principal -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="590dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ejercicios"
-            android:textSize="18sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:layout_marginTop="16dp"
-            android:gravity="end"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/searchIcon"
+            <TextView
+                android:id="@+id/titleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:clickable="true"
-                android:src="@android:drawable/ic_search_category_default" />
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Plan seleccionado"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/searchEditText"
-                android:layout_width="match_parent"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Buscar"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:visibility="gone" />
+                android:layout_marginLeft="160dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_save" />
 
         </LinearLayout>
 
         <ListView
             android:id="@+id/exerciseListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"/>
+            android:layout_height="224dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/titleTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Personalizado"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/exerciseListView2"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:layout_marginTop="20dp">
+
+        </ListView>
 
     </LinearLayout>
-
 
 </FrameLayout>
